@@ -1,0 +1,5 @@
+# exclude everything starts with ., docker-compose.yml, and everything ends with md
+
+.*
+docker-compose.yml
+*.md

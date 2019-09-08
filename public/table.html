@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+  <title>User_Information</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <link href="css/mycss.css" rel="stylesheet">
+  <div class="collapse navbar-collapse">
+    <div class="navbar-nav">
+  <!-- Link from openclassrooms for linking html to html
+    https://openclassrooms.com/en/courses/2479876-build-your-website-with-html5-and-css3/2490386-creating-links-->
+      <a href="index.html">My Information </a>
+      <a href="table.html">Table of Books</a>
+      <a href="Good_Bye.html">See You Soon</a>
+    </div>
+  </div>
+</nav>
+</head>
+
+<body>
+  <table id="taskTable" class="table">
+      <!-- Form and submit button from Quora https://www.quora.com/Can-we-use-form-and-table-tag-together-to-create-a-form -->
+      <FORM METHOD="POST" ACTION="">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Author(s)</th>
+          <th scope="col">Year Published</th>
+          <th scope="col">Publisher</th>
+          <th scope="col">Page Count</th>
+          <th scope="col">MSRP</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Case in Point</td>
+          <td>Marc P. Cosentino</td>
+          <td>2018</td>
+          <td>Burgee Press</td>
+          <td>229 pages</td>
+          <td>$22.00</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Case Interview Secrets</td>
+          <td>Victor Cheng</td>
+          <td>2012</td>
+          <td>Innovation Press</td>
+          <td>292 pages</td>
+          <td>$19.84</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Hacking the Case Interview</td>
+          <td>Taylor Warfield</td>
+          <td>2017</td>
+          <td>CreateSpace Independent</td>
+          <td>161 pages</td>
+          <td>$19.99</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Swipe to Unlock</td>
+          <td>Neel Mehta</td>
+          <td>2017</td>
+          <td>CreateSpace Independent</td>
+          <td>345 pages</td>
+          <td>$22.49</td>
+        </tr>
+
+        <tr>
+          <th scope="row">5</th>
+          <td><input type="TEXT" </td>
+          <td><input type="TEXT" </td>
+          <td><input type="TEXT" </td>
+          <td><input type="TEXT" </td>
+          <td><input type="TEXT" </td>
+          <td><input type="TEXT" </td>
+          <INPUT TYPE="SUBMIT" VALUE="Submit">
+
+        </tr>
+
+  </form>
+
+  
+      </tbody>
+    </table>
+  <!-- table from http://tristen.ca/tablesort/demo/ -->
+    <script src='js/tablesort.min.js'></script>
+    <script>
+      new Tablesort(document.getElementById('taskTable'));
+    </script>
+
+  </body>
+  </html>
