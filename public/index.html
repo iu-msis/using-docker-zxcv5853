@@ -17,6 +17,18 @@
 </nav>
 </head>
 <body>
+  <div class="container">
+    <div class="row" id="patientWaitingApp">
+        <div id="patient patientWaiting" class="col-md-3 queueView">
+
+          <div class="patient patientWaiting"
+        v-for="patient in patients">
+
+<!--        <span class="patientName">{{ patient.lastName }}</span>
+        <span class="patientName">{{ patient.firstName }}</span><br>
+        {{ patient.sexAtBirth }} {{ patient.dob}} -->
+
+
   <h1 id="textCenter">Introducing Myself</h1>
 <center><a href="https://randomuser.me/api/portraits/women/91.jpg">
 <img class="img-thumbnail" src="https://randomuser.me/api/portraits/women/91.jpg"
@@ -29,29 +41,38 @@
   </tr>
   <tr>
     <td><strong>Name :</strong></td>
-    <td>Elizabeth Harrison </td>
+    <td><p>{{ patients.results[0].name.first }} {{ patients.results[0].name.last }}</p> </td>
   </tr>
   <tr>
     <td><strong>Country or origin : </strong></td>
-    <td>The United States of America </td>
+    <td><p>{{ patients.results[0].nat }}</p> </td>
   </tr>
   <tr>
     <td><strong>Birthdate : </strong></td>
-    <td> 10/6/1982 </td>
+    <td> <p>{{ patients.results[0].dob.date }}</p> </td>
   </tr>
   <tr>
     <td><strong>Age :</strong> </td>
-    <td>37</td>
+    <td><p>{{ patients.results[0].dob.age }}</p></td>
   </tr>
   <tr>
     <td><strong> Email Address  : </strong></td>
-    <td><a href="mailto:elizabeth.harrison14@example.com">elizabeth.harrison14@example.com </a></td>
+    <td><p>{{ patients.results[0].email }}</p></td>
 </table>
 
 </tr>
 
 <!-- Contents of the information from randomuser.me https://randomuser.me/-->
 <p id="textCenter">Thank you very much for visiting my webpage!!</p>
+
+
+
+  </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/waiting.app.js"></script>
 
 </body>
 </html>

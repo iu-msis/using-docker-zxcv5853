@@ -99,3 +99,29 @@ th[role=columnheader]:not(.no-sort):hover:after {
 	visibility: visible;
 	opacity: 1;
 }
+
+.patientWaiting{
+  background-color: white;
+  margin: 6px;
+  padding: 6px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.patientName{
+  font-weight: bold;
+}
+
+.highPriority{
+  border-color:red;
+  border-left-width: 6px;
+}
+
+.mediumPriority{
+  border-color:orange;
+  border-left-width: 6px;
+  
+}.lowPriority{
+  border-color:blue;
+  border-left-width: 6px;
+}
