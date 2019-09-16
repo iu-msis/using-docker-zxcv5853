@@ -20,9 +20,10 @@
   <h1 id="textCenter">Introducing Myself</h1>
   <br><br>
 
- <!--<div class="container">-->
-    <div id="patientWaitingApp">
+ <div class="container" id="patientWaitingApp">
+   <template v-if="patients.results">
 
+    <div id="patientWaitingApp">
 <!--        <div id="patient patientWaiting"> -->
 
 <!--          <div class="patient patientWaiting"> -->
@@ -44,7 +45,7 @@
 <!-- Table format from w3schools.com https://www.w3schools.com/html/html_tables.asp-->
 
 
-<br><br>
+<br>
     <center><p><strong>Name :</strong> {{ patients.results[0].name.first }} {{ patients.results[0].name.last }}</p></center>
     <center><p><strong>Country or origin : </strong> {{ patients.results[0].nat }}</p></center>
 
@@ -52,16 +53,17 @@
 
     <center><p><strong>Age :</strong>{{ patients.results[0].dob.age }}</p></center>
 
-    <center><p><strong> Email Address  : </strong><a href="mailto:{{ patients.results[0].email}}">{{ patients.results[0].email }}</a></p></center>
+    <center><p><strong> Email Address  : </strong><a v-bind:href="'mailto:'+patients.results[0].email">{{ patients.results[0].email }}</a></p></center>
 
   </div>
+</template>
 </div>
 
 
 
 <!-- Contents of the information from randomuser.me https://randomuser.me/-->
 
-<br><br>
+<br>
 <h3 id="textCenter">Thank you very much for visiting my webpage!!</h3>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
