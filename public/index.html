@@ -18,59 +18,51 @@
 </head>
 <body>
   <h1 id="textCenter">Introducing Myself</h1>
+  <br><br>
 
-  <div class="container">
-    <div class="row" id="patientWaitingApp">
-        <div id="patient patientWaiting">
+ <!--<div class="container">-->
+    <div id="patientWaitingApp">
 
-          <div class="patient patientWaiting">
+<!--        <div id="patient patientWaiting"> -->
+
+<!--          <div class="patient patientWaiting"> -->
 
 <!--        <span class="patientName">{{ patient.lastName }}</span>
         <span class="patientName">{{ patient.firstName }}</span><br>
         {{ patient.sexAtBirth }} {{ patient.dob}} -->
 
 
+
 <center><a v-bind:href="patients.results[0].picture.large">
 <img class="img-thumbnail" v-bind:src="patients.results[0].picture.large"
 
-   alt="Profile Picture"></a></center>
-<p id="textCenter">https://randomuser.me/api/portraits/women/91.jpg</p>
+
+   alt="Profile Picture"></a>
+
+
+<p id="textCenter">https://randomuser.me/api</p></center>
 <!-- Table format from w3schools.com https://www.w3schools.com/html/html_tables.asp-->
-<table style="border=1px solid black;margin-left:auto;margin-right:auto;" >
-  <tr>
-    <th> <p style="font-size:25px">Profile</th>
-  </tr>
-  <tr>
-    <td><strong>Name :</strong></td>
-    <td><p>{{ patients.results[0].name.first }} {{ patients.results[0].name.last }}</p> </td>
-  </tr>
-  <tr>
-    <td><strong>Country or origin : </strong></td>
-    <td><p>{{ patients.results[0].nat }}</p> </td>
-  </tr>
-  <tr>
-    <td><strong>Birthdate : </strong></td>
-    <td> <p>{{ patients.results[0].dob.date }}</p> </td>
-  </tr>
-  <tr>
-    <td><strong>Age :</strong> </td>
-    <td><p>{{ patients.results[0].dob.age }}</p></td>
-  </tr>
-  <tr>
-    <td><strong> Email Address  : </strong></td>
-    <td><a href="mailto:{{ patients.results[0].email}}">{{ patients.results[0].email }}</a></td>
-</table>
-
-</tr>
-
-<!-- Contents of the information from randomuser.me https://randomuser.me/-->
-<p id="textCenter">Thank you very much for visiting my webpage!!</p>
 
 
+<br><br>
+    <center><p><strong>Name :</strong> {{ patients.results[0].name.first }} {{ patients.results[0].name.last }}</p></center>
+    <center><p><strong>Country or origin : </strong> {{ patients.results[0].nat }}</p></center>
+
+    <center><p><strong>Birthdate : </strong>{{ patients.results[0].dob.date }}</p></center>
+
+    <center><p><strong>Age :</strong>{{ patients.results[0].dob.age }}</p></center>
+
+    <center><p><strong> Email Address  : </strong><a href="mailto:{{ patients.results[0].email}}">{{ patients.results[0].email }}</a></p></center>
 
   </div>
 </div>
-</div>
+
+
+
+<!-- Contents of the information from randomuser.me https://randomuser.me/-->
+
+<br><br>
+<h3 id="textCenter">Thank you very much for visiting my webpage!!</h3>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="js/waiting.app.js"></script>
