@@ -55,6 +55,12 @@
 
     <center><p><strong> Email Address  : </strong><a v-bind:href="'mailto:'+patients.results[0].email">{{ patients.results[0].email }}</a></p></center>
 
+<center>
+<form @submit.prevent="fetchPatients">
+  <button type="submit">Reload</button>
+</form>
+</center>
+
   </div>
 </template>
 </div>
